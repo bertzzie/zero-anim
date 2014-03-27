@@ -1,0 +1,45 @@
+@-webkit-keyframes zero-run-init {
+    from { background-position: 0px 0px; }
+    to { background-position: -275px 0px; }
+}
+
+@-webkit-keyframes zero-run {
+    from { background-position: -110px 0px; }
+    to { background-position: -825px 0px; }
+}
+
+@-webkit-keyframes zero-stand {
+    from { background-position: 0px -50px; }
+    to { background-position: -105px -50px; }
+}
+
+#viewport {
+    background-image: url("../images/bg.png");
+    background-position: -6700px -3px;
+    height: 225px;
+    width: 640px;
+}
+
+#zero {
+    background-image: url("../images/zero.png");
+    margin: 0 auto;
+    
+    width: 55px;
+    height: 50px;
+    
+    position: absolute;
+    top: 145px;
+    left: 100px;
+    
+    /*
+    background-position: -815px -660px;
+    */
+    
+    /*
+    -webkit-animation: 
+        zero-run-init 0.8s steps(5, end) 1,
+        zero-run 1s steps(8, end) infinite;
+    */
+    
+    -webkit-animation: zero-stand 1s steps(2, end) infinite;
+}
