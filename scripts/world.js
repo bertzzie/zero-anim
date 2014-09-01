@@ -11,7 +11,9 @@ var zero = {
     },
     standStill: function () {
         if (this.running) {
-            this.el.style.webkitAnimation = "zero-stand 1s steps(2, end) infinite";
+            this.el.classList.remove("zero-run-right");
+            this.el.classList.remove("zero-run-left");
+            this.el.classList.add("zero-stand");
             this.running = false;
         }
     },
@@ -24,7 +26,9 @@ var zero = {
         }
         
         if (!this.running) {
-            this.el.style.webkitAnimation = "zero-run 1s steps(13, end) infinite";
+            this.el.classList.remove("zero-stand");
+            this.el.classList.add("zero-run-right");
+            this.el.style.webkitAnimation = "";
             this.running = true;
         }
         
@@ -44,7 +48,8 @@ var zero = {
         }
         
         if (!this.running) {
-            this.el.style.webkitAnimation = "zero-run 1s steps(13, end) infinite";
+            this.el.classList.remove("zero-stand");
+            this.el.classList.add("zero-run-left");
             this.running = true;
         }
         

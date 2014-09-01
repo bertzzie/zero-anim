@@ -13,6 +13,14 @@
     to { background-position: -105px -50px; }
 }
 
+@-webkit-keyframes zero-move-right {
+    to   { left: 600px; }
+}
+
+@-webkit-keyframes zero-move-left {
+    to   { left: 0px; }
+}
+            
 #viewport {
     background-image: url("../images/bg.png");
     background-position: -6700px -3px;
@@ -40,6 +48,26 @@
         zero-run-init 0.8s steps(5, end) 1,
         zero-run 1s steps(8, end) infinite;
     */
-    
+}
+
+.zero-stand {
     -webkit-animation: zero-stand 1s steps(2, end) infinite;
 }
+
+.zero-run-right {
+    -webkit-animation: 
+        zero-move-right 4s linear infinite,
+        zero-run 1s steps(13, end) infinite;
+}
+
+.zero-run-left {
+    -webkit-animation: 
+        zero-move-left 4s linear infinite,
+        zero-run 1s steps(13, end) infinite;
+}
+
+.zero-run-instant {
+    -webkit-animation: zero-run 1s steps(13, end) 1;
+    -webkit-animation-delay: -1s;
+}
+
